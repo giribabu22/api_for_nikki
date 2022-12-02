@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registation form</title>
+</head>
+<body>
+    <h1>create meeting</h1>
+    <div class="bg">
+        <div class="box">
+            <div class="empty"></div>
+                <form action="/create_do" method="post">
+                    <input type="text" name="name" placeholder="Meeting name" required>
+                    <input type="text" name="start_at" placeholder="Start time" required>
+                     <input type="text" name="end_at" placeholder="End time" required>
+                    <input type="text" name="link" placeholder="Meeting url" required>
+                    <button type="submit">Submit</button>
+                </form>
+        </div>
+    </div>
+    <style>
+        *{
+            align-items: center;
+            width: auto;
+            margin: 10px 0;
+        }
+        body{
+            background-color: rgba(156, 155, 155, 0.206);
+        }
+        .bg{
+            background: rgba(128, 128, 128, 0.76);
+            height: 64vh;
+            width: 44vh;
+            border-radius: 50%;
+            display: flex;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .box{
+            margin:  0 10px;
+        }
+        h1{
+            font-family: monospace;
+            font-weight: 600;
+            font-size: 45px;
+        }
+        textarea{
+            border-radius: 10px;
+            padding: 5px;
+            background-color: azure;
+        }
+        input{
+            padding: 10px 30px;
+            border-radius: 10px;
+            font-size: 22px;
+            background-color: azure;
+            margin: 5px auto;
+            margin-left: 30px;
+        }
+        button{
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: rgb(244, 183, 70);
+            margin: 10px;
+            margin-left: 80px;
+
+        }
+        a{
+            text-decoration: none;
+            height: 30px;
+            width: 80px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: rgb(244, 183, 70);
+            border: 1px solid;
+        }
+         #menu{
+            display: flexbox;
+            left: 0%;
+            width: 100%;
+            color: white;
+            text-align: left;
+        }
+        #menu a{
+            font-size: 1.3rem;
+            display: flexbox;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    </style>
+
+</body>
+</html>
