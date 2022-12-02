@@ -15,7 +15,7 @@ routers.route('')
     })
     .post((req, res) =>{
         does_table.create(req.body).then((result) => {
-            res.redirect('/home')
+            res.redirect('/')
         }).catch((Errors) => {
             res.json({ err: Errors })
         });
