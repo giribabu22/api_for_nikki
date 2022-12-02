@@ -13,16 +13,12 @@ app.set('views', 'views');
 app.set('view engine', 'hbs');
 app.set('port', process.env.PORT || 3000);
 
-app.use('/home', require('./routes/home'))
+app.use('/', require('./routes/home'))
 app.use('/create_do',require('./routes/create_do'))
 
 app.get('/api/data', async (req, res) => {
     let total_data = await does_table.findAll()
-    res.send(total_data)
-})
-
-app.get('/', (req, res) => {
-    res.send('hello>>')
+    res.json({"do_data":total_data})
 })
 
 app.get('/del/:name', async (req, res) => {
