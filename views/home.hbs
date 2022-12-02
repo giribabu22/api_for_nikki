@@ -28,7 +28,8 @@
                 method: 'GET'
             })
             
-            let data = await res.json()
+            let {do_data} = await res.json()
+            let data = do_data
             console.log(data)
             data.forEach(element => {
                 const post = document.createElement("div");
